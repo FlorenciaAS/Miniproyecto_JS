@@ -7,6 +7,10 @@ var boton= document.getElementById("boton-agregar");
 
 //FUNCIONES
 var agregarTarea= function(){
+    var tarea=tareaInput.value;
+    var nuevaTarea= document.createElement("li");
+    var enlaceA= document.createElement("a");
+    var contenido= document.createTextNode(tarea);
     
 };
 var comprobarInput=function(){
