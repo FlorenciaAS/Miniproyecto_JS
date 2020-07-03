@@ -7,13 +7,13 @@ var boton= document.getElementById("boton-agregar");
 
 //FUNCIONES
 var agregarTarea= function(){
-    alert( "agregar");
+    
 };
 var comprobarInput=function(){
-    alert( "comprobar");
+    
 };
 var eliminarTarea=function(){
-    alert( "eliminar");
+    
 };
 //EVENTOS
 
