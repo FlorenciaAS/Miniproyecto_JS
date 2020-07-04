@@ -31,15 +31,25 @@ var agregarTarea= function(){
 
     tareaInput.value="";
     
+    for (i =i; i<=lista.children.length -1 ; i++) {
+        lista.children[i].addEventListener("click", function() {
+            this.parentNode.removeChild(this);
+
+
+        }); 
+        
+    }
 
 };
 
 
 var comprobarInput=function(){
-    
+    tareaInput.className="";
+    tareaInput.setAttribute("placeholder", "Agrega tarea");
+
 };
 var eliminarTarea=function(){
-    
+    this.parentNode.removeChild(this);
 };
 //EVENTOS
 
@@ -50,7 +60,7 @@ boton.addEventListener("click", agregarTarea);
 tareaInput.addEventListener("click", comprobarInput);
 
 //borrando elementos de la lista de tareas
-for(var i =0; i <=lista.children.length -1; i++) {
+for( i =0; i <=lista.children.length -1; i++) {
     lista.children[i].addEventListener("click", eliminarTarea);
 }
 
