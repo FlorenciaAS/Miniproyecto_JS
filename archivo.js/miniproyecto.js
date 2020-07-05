@@ -1,68 +1,59 @@
-(function (){
+(function(){
+	
+	var lista = document.getElementById("lista"),
+		tareaInput = document.getElementById("tareaInput"),
+		botonNuevaTarea = document.getElementById("boton");
 
-//VARIABLES
-var lista= document.getElementById("lista");
-var tareaInput=document.getElementById("tareaInput");
-var boton= document.getElementById("boton-agregar");
+	
+	var agregarTarea = function(){
+		var tarea = tareaInput.value,
+			nuevaTarea = document.createElement("li"),
+			enlace = document.createElement("a"),
+			contenido = document.createTextNode(tarea);
 
-//FUNCIONES
-var agregarTarea= function(){
-    var tarea=tareaInput.value;
-    var nuevaTarea= document.createElement("li");
-    var enlace= document.createElement("a");
-    var contenido= document.createTextNode(tarea);
+		if (tarea === "") {
+			tareaInput.setAttribute("placeholder", "Agrega una tarea valida");
+			tareaInput.className = "error";
+			return false;
+		}
 
+		// Agregamos el contenido al enlace
+		enlace.appendChild(contenido);
+		// Le agregamos un atributo href
+		enlace.setAttribute("href", "#");
+		// Agrergamos el enlace a la nueva tarea 
+		nuevaTarea.appendChild(enlace);
+		// Agregamos la nueva tarea a la lista
+		lista.appendChild(nuevaTarea);
 
-    if (tarea==="") {
-        tareaInput.setAttribute("placeholder", "Agregar tarea válida");
-        tareaInput.className="error";
-        return false;
-    }
+		tareaInput.value = "";
 
+		for (var i = 0; i <= lista.children.length -1; i++) {
+			lista.children[i].addEventListener("click", function(){
+				this.parentNode.removeChild(this);
+			});
+		}
 
-        //se agrega el contenido al enlace
-        enlace.apendchild(contenido);
-        //se establece un atributo href
-        enlace.setAttribute("href", "#");
-        //se agrega el enlace al elemento li
-        nuevaTarea.appendChild(enlace);
-        //se agrega el elemento li a la lista
-        lista.appendChild(nuevaTarea);
+	};
+	var comprobarInput = function(){
+		tareaInput.className = "";
+		teareaInput.setAttribute("placeholder", "Agrega tu tarea");
+	};
 
-    tareaInput.value="";
-    
-    for (i =i; i<=lista.children.length -1 ; i++) {
-        lista.children[i].addEventListener("click", function() {
-            this.parentNode.removeChild(this);
+	var eleminarTarea = function(){
+		this.parentNode.removeChild(this);
+	};
 
+	// Eventos
 
-        }); 
-        
-    }
+	// Agregar Tarea
+	botonNuevaTarea.addEventListener("click", agregarTarea);
 
-};
+	// Comprobar Input
+	tareaInput.addEventListener("click", comprobarInput);
 
-
-var comprobarInput=function(){
-    tareaInput.className="";
-    tareaInput.setAttribute("placeholder", "Agrega tarea");
-
-};
-var eliminarTarea=function(){
-    this.parentNode.removeChild(this);
-};
-//EVENTOS
-
-//agregar tarea
-boton.addEventListener("click", agregarTarea);
-
-//comprobar input
-tareaInput.addEventListener("click", comprobarInput);
-
-//borrando elementos de la lista de tareas
-for( i =0; i <=lista.children.length -1; i++) {
-    lista.children[i].addEventListener("click", eliminarTarea);
-}
-
+	// Borrando Elementos de la lista
+	for (var i = 0; i <= lista.children.length -1; i++) {
+		lista.children[i].addEventListener("click", eleminarTarea);
+	}
 }());
-
