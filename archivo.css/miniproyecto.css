@@ -14,19 +14,20 @@
 .container {
 	margin: auto;
 	max-width: 990px;
-    width: 90%;
+    width: 80%;
     height: 90px;
     
 }
- 
+
 .container-principal {
 	background: #B56EE3 ;
 	color: #fff;
 	padding: 50px 0;
-    width: 100%;
+	width: 100%;
+	height: 210px;
     border-bottom: 5px solid violet;
 }
- 
+
 .conainer-principal .formulario {
 	color: #212121;
     text-align: center;
@@ -36,8 +37,8 @@
 
 .formulario input[type=text] {
 	margin:0px 0px 20px 20px;
+	width: 80%;
 	padding: 10px;
-    width: 80%;
     border-radius: 30px;
 	border-style: none;
 	
@@ -54,7 +55,7 @@
     padding: 10px;
 	border-radius: 50px;
 	border-style: none;
-	margin-left: 30px;
+	margin-left: 20px;
 }
 
 
@@ -62,26 +63,24 @@
     border: 1px solid #fff;
 
 }
- 
-
-
 
 .tareas .lista {
     list-style: none;
 }
- 
+
 .tareas .lista li {
     border-bottom: 1px solid #B6B6B6;
     list-style: circle;
 }
- 
+
 .tareas .lista li a {
 	color: #212121;
 	display: block;
 	padding: 20px 0;
 	text-decoration: none;
 }
- 
+
 .tareas .lista li a:hover {
 	text-decoration: line-through;
 }
+
