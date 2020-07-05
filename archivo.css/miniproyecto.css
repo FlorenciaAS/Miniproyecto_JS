@@ -1,68 +1,78 @@
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+
  
-body {
-	background: #FAFAFA;
+.body {
+	background: #fcfdfd;
 	font-family: arial, helvetica, sans-serif;
-	font-size: 16px;
+    font-size: 16px;
+    
 }
- 
-.wrap {
+.titulo{
+    font-family: 'Londrina Outline', cursive;
+    
+
+}
+.container {
 	margin: auto;
 	max-width: 800px;
-	width: 90%;
-}
- 
-.principal {
-	background: #F44336;
-	border-top: 20px solid #D32F2F;
-	color: #fff;
-	padding: 50px 0;
-	width: 100%;
-}
- 
-.principal .formulario {
-	color: #212121;
-	text-align: center;
-}
- 
-.principal .formulario input[type=text] {
-	margin-bottom: 20px;
-	padding: 10px;
-	width: 100%;
-}
- 
-.principal .formulario input[type=text].error {
-	border: 5px solid #D32F2F;
-	color: red;
-}
- 
-.principal .formulario .boton {
-	background: none;
-	border: 1px solid #ebe7e7;
-	color: #fff;
-	display: inline-block;
-	font-size: 16px;
-    padding: 15px;
+    width: 90%;
+    height: 90px;
     
 }
  
-.principal .formulario .boton:hover {
-	border: 1px solid #fff;
+.container-principal {
+	background: #B56EE3 ;
+	color: #fff;
+	padding: 50px 0;
+    width: 100%;
+    border-bottom: 5px solid violet;
+}
+ 
+.conainer-principal .formulario {
+	color: #212121;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.formulario input[type=text] {
+	margin-bottom: 20px;
+	padding: 10px;
+    width: 80%;
+    border-radius: 30px;
+    border-style: none;
+}
+
+.container-principal .formulario input[type=text].error {
+	border: 2px solid #D32F2F;
+	color: red;
+}
+
+.boton{
+    background: none;
+	border: 1px solid #f3eded;
+	color: #fff;
+	font-size: 16px;
+    padding: 15px;
+    border-radius: 50px;
+    
+}
+
+
+.container-principal .formulario .boton:hover {
+    border: 1px solid #fff;
+
 }
  
 /* - Tareas - */
+
+
 .tareas .lista {
-	list-style: none;
+    list-style: none;
 }
  
 .tareas .lista li {
-	border-bottom: 1px solid #B6B6B6;
+    border-bottom: 1px solid #B6B6B6;
+    list-style: circle;
 }
  
 .tareas .lista li a {
