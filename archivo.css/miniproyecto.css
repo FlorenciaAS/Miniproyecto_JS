@@ -1,6 +1,6 @@
 
 .body {
-	background: #fcfdfd;
+	background: #fcfafc;
 	font-family: arial, helvetica, sans-serif;
 	font-size: 16px;
 	margin:0px 0px;    
@@ -65,8 +65,7 @@
 
 
 .container-principal .formulario .boton:hover {
-    border: 1px solid #fff;
-
+	border: 1px solid rgb(243, 169, 237);
 }
 
 .tareas .lista {
@@ -74,7 +73,7 @@
 }
 
 .tareas .lista li {
-    border-bottom: 1px solid #B6B6B6;
+	border-bottom: 1px solid #B6B6B6;
     list-style: circle;
 }
 
@@ -85,7 +84,6 @@
 	text-decoration: none;
 	font-family: 'Overlock', cursive;
 	font-size: 20px;
-
 }
 
 .tareas .lista li a:hover {
@@ -94,7 +92,7 @@
 }
 
 
-@media(max-width:576px){
+@media(max-width:768px){
 	.container-principal{
 		height: 250px;
 	}
